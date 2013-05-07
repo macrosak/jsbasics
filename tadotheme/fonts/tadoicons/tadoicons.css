@@ -1,0 +1,273 @@
+@font-face {
+   font-family: "tadoicons";
+   src: url("tadoicons.eot");
+   src: url("tadoicons.eot?#iefix") format("embedded-opentype"),
+   url("tadoicons.svg#tadoicons") format("svg"),
+   url("tadoicons.woff") format("woff"),
+   url("tadoicons.ttf") format("truetype");
+   font-weight: normal;
+   font-style: normal;
+}
+
+[class^="tado-icon-"]:before, [class*=" tado-icon-"]:before {
+   font-family: "tadoicons";
+   font-style: normal;
+   speak: none;
+   font-weight: normal;
+   /*line-height: 1;*/
+   -webkit-font-smoothing: antialiased;
+}
+.tado-icon-arrow_right:before {
+   content: "\e000";
+}
+.tado-icon-arrow_down:before {
+   content: "\e001";
+}
+.tado-icon-tado_logo:before {
+   content: "\e002";
+}
+.tado-icon-weather-code-23:before,
+.tado-icon-weather-code-24:before,
+.tado-icon-windy:before {
+   content: "\e003";
+}
+.tado-icon-weather-code-0:before,
+.tado-icon-weather-code-1:before,
+.tado-icon-weather-code-2:before,
+.tado-icon-weather-code-3:before,
+.tado-icon-weather-code-4:before,
+.tado-icon-weather-code-37:before,
+.tado-icon-weather-code-38:before,
+.tado-icon-weather-code-39:before,
+.tado-icon-weather-code-45:before,
+.tado-icon-weather-code-47:before,
+.tado-icon-thunderstorms:before {
+   content: "\e004";
+}
+.tado-icon-weather-code-32:before,
+.tado-icon-weather-code-34:before,
+.tado-icon-weather-code-36:before,
+.tado-icon-sunny:before {
+   content: "\e005";
+}
+.tado-icon-weather-code-13:before,
+.tado-icon-weather-code-15:before,
+.tado-icon-weather-code-16:before,
+.tado-icon-weather-code-41:before,
+.tado-icon-weather-code-43:before,
+.tado-icon-snow:before {
+   content: "\e006";
+}
+.tado-icon-weather-code-14:before,
+.tado-icon-snow_scattered:before {
+   content: "\e007";
+}
+.tado-icon-weather-code-11:before,
+.tado-icon-weather-code-12:before,
+.tado-icon-rainy:before {
+   content: "\e008";
+}
+.tado-icon-weather-code-5:before,
+.tado-icon-weather-code-6:before,
+.tado-icon-weather-code-7:before,
+.tado-icon-weather-code-10:before,
+.tado-icon-weather-code-18:before,
+.tado-icon-weather-code-46:before,
+.tado-icon-rainy_snow:before {
+   content: "\e009";
+}
+.tado-icon-weather-code-8:before,
+.tado-icon-weather-code-42:before,
+.tado-icon-rainy_snow_scattered:before {
+   content: "\e00a";
+}
+.tado-icon-weather-code-40:before,
+.tado-icon-rainy_scattered:before {
+   content: "\e00b";
+}
+.tado-icon-weather-code-35:before,
+.tado-icon-rainy_hail:before {
+   content: "\e00c";
+}
+.tado-icon-weather-code-27:before,
+.tado-icon-weather-code-29:before,
+.tado-icon-night_cloudy:before {
+   content: "\e00d";
+}
+.tado-icon-weather-code-31:before,
+.tado-icon-weather-code-33:before,
+.tado-icon-night_clear:before {
+   content: "\e00e";
+}
+.tado-icon-weather-code-17:before,
+.tado-icon-hail:before {
+   content: "\e00f";
+}
+.tado-icon-weather-code-25:before,
+.tado-icon-freezing:before {
+   content: "\e010";
+}
+.tado-icon-weather-code-20:before,
+.tado-icon-weather-code-21:before,
+.tado-icon-weather-code-22:before,
+.tado-icon-foggy:before {
+   content: "\e011";
+}
+.tado-icon-weather-code-9:before,
+.tado-icon-drizzle:before {
+   content: "\e012";
+}
+.tado-icon-drizzle_scattered:before {
+   content: "\e013";
+}
+.tado-icon-weather-code-26:before,
+.tado-icon-cloudy:before {
+   content: "\e014";
+}
+.tado-icon-weather-code-30:before,
+.tado-icon-weather-code-44:before,
+.tado-icon-cloudy_partly:before {
+   content: "\e015";
+}
+.tado-icon-weather-code-28:before,
+.tado-icon-cloudy_mostly:before {
+   content: "\e016";
+}
+.tado-icon-users:before {
+   content: "\e017";
+}
+.tado-icon-tablet:before {
+   content: "\e018";
+}
+.tado-icon-support:before {
+   content: "\e019";
+}
+.tado-icon-sun:before {
+   content: "\e01a";
+}
+.tado-icon-standby:before {
+   content: "\e01b";
+}
+.tado-icon-smartphone:before {
+   content: "\e01c";
+}
+.tado-icon-sleep:before {
+   content: "\e01d";
+}
+.tado-icon-settings:before {
+   content: "\e01e";
+}
+.tado-icon-reward:before {
+   content: "\e01f";
+}
+.tado-icon-report:before {
+   content: "\e020";
+}
+.tado-icon-plus:before {
+   content: "\e021";
+}
+.tado-icon-phone:before {
+   content: "\e022";
+}
+.tado-icon-person:before {
+   content: "\e023";
+}
+.tado-icon-noentry:before {
+   content: "\e024";
+}
+.tado-icon-minus:before {
+   content: "\e025";
+}
+.tado-icon-middle2:before {
+   content: "\e026";
+}
+.tado-icon-middle:before {
+   content: "\e027";
+}
+.tado-icon-manualoff:before {
+   content: "\e028";
+}
+.tado-icon-manualhome:before {
+   content: "\e029";
+}
+.tado-icon-lock:before {
+   content: "\e02a";
+}
+.tado-icon-letter:before {
+   content: "\e02b";
+}
+.tado-icon-leaf:before {
+   content: "\e02c";
+}
+.tado-icon-info:before {
+   content: "\e02d";
+}
+.tado-icon-home:before {
+   content: "\e02e";
+}
+.tado-icon-hand:before {
+   content: "\e02f";
+}
+.tado-icon-flame:before {
+   content: "\e030";
+}
+.tado-icon-coffee:before {
+   content: "\e031";
+}
+.tado-icon-clock:before {
+   content: "\e032";
+}
+.tado-icon-calendar:before {
+   content: "\e033";
+}
+.tado-icon-away:before {
+   content: "\e034";
+}
+.tado-icon-attention:before {
+   content: "\e035";
+}
+.tado-icon-arrow_rounded_corners:before {
+   content: "\e036";
+}
+.tado-icon-arrow:before {
+   content: "\e037";
+}
+.tado-icon-arrow_up:before {
+   content: "\e038";
+}
+.tado-icon-megaphone:before {
+   content: "\e039";
+}
+.tado-icon-attention2:before {
+   content: "\e03a";
+}
+.tado-icon-protected:before {
+   content: "\e03b";
+}
+.tado-icon-circle:before {
+   content: "\e03c";
+}
+.tado-icon-check:before {
+   content: "\e03d";
+}
+.tado-icon-arrow2_left:before {
+   content: "\e03e";
+}
+.tado-icon-arrow2_right:before {
+   content: "\e03f";
+}
+.tado-icon-arrow2_up:before {
+   content: "\e040";
+}
+.tado-icon-arrow2_down:before {
+   content: "\e041";
+}
+.tado-icon-thermometer:before {
+   content: "\e042";
+}
+.tado-icon-box:before {
+   content: "\e043";
+}
+.tado-icon-question-mark:before {
+   content: "\e044";
+}
