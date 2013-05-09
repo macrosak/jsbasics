@@ -58,27 +58,392 @@
       </section>
       <section>
          <section>
-            <h2>Title</h2>
+            <h2>Boring theory</h2>
 
-<pre><code class="java">
+<!--<pre><code class="javascript">-->
 
-   code
+   <!--code-->
+
+<!--</code></pre>-->
+
+
+             <i class="icon-quote-left icon-4x"></i> What the heck is <span class="color">javascript</span>?! <i class="icon-quote-right icon-4x"></i>
+
+             <br/>
+             <br/>
+
+             <h3 class="fragment">
+               <span class="color">ECMA</span>Script!
+            </h3  >
+
+             <div class="fragment">
+                 version 1 - 5
+             </div>
+
+             <aside class="notes">
+                 In December 1995, Sun Microsystems and Netscape announced JavaScript in a press release.
+                 JScript was included in Internet Explorer 3.0, released in August 1996.
+                 ECMA European Computer Manufacturers Association
+                 June 1997	First edition of ECMAScript
+             </aside>
+
+
+
+             <img class="fragment" style="position: absolute; height: 80%; bottom: 0; right: 0;  z-index: -1; border: 0; box-shadow: none; background-color: transparent;" src="img/sparta.png">
+
+             </img>
+         </section>
+         <section>
+            <h2>Browser support</h2>
+
+
+
+<pre><code class="javascript">
+ new Date().toISOString();
+
+</code></pre>
+
+             <br/>
+             <br/>
+             <a href="http://kangax.github.io/es5-compat-table/">http://kangax.github.io/es5-compat-table/</a>
+         </section>
+      </section>
+
+       <section>
+           <section>
+               <h2>Functions</h2>
+
+<!--<div  style="float: left; width: 45%">-->
+<pre><code class="javascript">
+ function quanti() {
+   console.log("Quanti FTW!");
+ }
+
+</code></pre>
+<pre class="fragment"><code class="javascript">
+ var quanti = function () {
+   console.log("Quanti FTW!");
+ }
+
+</code></pre>
+
+<pre class="fragment"><code class="javascript">
+ var quanti = function quanti() {
+   console.log("Quanti FTW!");
+ }
+
+</code></pre>
+           </section>
+
+           <section>
+               <h2>Self-executing functions</h2>
+               <div  style="float: left; width: 49%">
+<pre><code class="javascript">
+ (function () {
+   console.log("Quanti FTW!");
+ })();
+
+</code></pre>
+                   </div>
+               <div  style="float: right; width: 49%">
+<pre class="fragment"><code class="javascript">
+ !function () {
+   return "FTW!";
+ }();
+
+</code></pre>
+               </div>
+               <div style="clear: both"/>
+<pre class="fragment"><code class="javascript">
+ (function (quality) {
+   console.log("Quanti is " + quality + "!");
+ })("the best");
+
+</code></pre>
+<pre class="fragment"><code class="javascript">
+ (function ($) {
+   // Do stuff with $
+ })(jQuery);
 
 </code></pre>
 
 
-            <div class="fragment">
-               fragment
-            </div>
+           </section>
+
+           <section>
+               <h2>Overloading</h2>
+
+<pre><code class="javascript">
+ function overloaded(first) {
+   console.log("Version 1!");
+ )
+
+ function overloaded(first, second) {
+   console.log("Version 2!");
+ )
+
+</code></pre>
+               <img class="fragment" style="position: absolute; height: 80%; bottom: 0; right: 0;  border: 0; box-shadow: none; background-color: transparent" src="img/no.png">
+
+               </img>
 
 
-         </section>
-         <section>
-            <h2>Subsection</h2>
+           </section>
+       </section>
+
+       <section>
+           <section>
+               <h2>Equality</h2>
+
+               <p><strong>==</strong> vs <strong>===</strong></p>
 
 
-         </section>
+           </section>
+           <section>
+                <h2>Coertion</h2>
+
+               <p>Comparison <strong>x</strong> == <strong>y</strong>, where <strong>x</strong> and <strong>y</strong> are values, produces true or false. </p>
+
+           </section>
+           <section>
+                <h3>Coertion - type of <strong>x</strong> is the same as type of <strong>y</strong></h3>
+
+               <ul>
+                   <li><strong>x</strong> is undefined, return true: undefined == undefined</li>
+                   <li><strong>x</strong> is null, return true: null == null</li>
+                   <li><strong>x</strong> is number
+                       <ul>
+                           <li><strong>x</strong> or <strong>y</strong> is NaN, return false: NaN != NaN</li>
+                           <li><strong>x</strong> is the same value as <strong>y</strong>, return true: 2 == 2</li>
+                           <li>Zero equality: 0 == -0 == +0</li>
+                           <li>Else return false: 2 != 1</li>
+                       </ul>
+                   </li>
+                   <li><strong>x</strong> is string, then return true if <strong>x</strong> and <strong>y</strong> are exactly the same sequence of characters</li>
+                   <li><strong>x</strong> is boolean, return true if <strong>x</strong> and <strong>y</strong> are both true or both false</li>
+                   <li><strong>x</strong> is object, return true if <strong>x</strong> and <strong>y</strong> refer to the same object</li>
+               </ul>
+
+
+           </section>
+           <section>
+                <h3>Coertion - type of <strong>x</strong> is <span class="color">not</span> the same as type of <strong>y</strong></h3>
+
+               <ul>
+                   <li><strong>x</strong> is null and <strong>y</strong> is undefined, return true: null == undefined</li>
+                   <li><strong>x</strong> is undefined and <strong>y</strong> is null, return true: undefined == null</li>
+                   <li><strong>x</strong> is number and <strong>y</strong> is string, return the result of the comparison <strong>x</strong> == ToNumber(<strong>y</strong>): 2 == "2"</li>
+                   <li><strong>x</strong> is string and <strong>y</strong> is number, return the result of the comparison ToNumber(<strong>x</strong>) == <strong>y</strong>: "2" == 2</li>
+                   <li><strong>x</strong> is boolean, return the result of the comparison ToNumber(<strong>x</strong>) == <strong>y</strong>: false == 0 and true == 1 but true != 2</li>
+                   <li><strong>y</strong> is boolean, return the result of the comparison <strong>x</strong> == ToNumber(<strong>y</strong>)</li>
+               </ul>
+
+           </section>
+           <section>
+                <h3>Coertion - <strong>x</strong> is string or number and <strong>y</strong> is object</h3>
+
+               <p>
+                   <strong>x</strong> == ToPrimitive(<strong>y</strong>): ToPrimitive means implicit valueOf call or toString if toString is defined and valueOf is not
+               </p>
+
+           </section>
+           <section>
+                <h3>Example</h3>
+
+<pre><code class="javascript">
+    [0] == true;
+
+    //HOW IT WORKS...
+    //convert boolean using toNumber
+    [0] == 1;
+    //convert object using toPrimitive
+    //[0].valueOf() is not a primitive so use...
+    //[0].toString() -> "0"
+    "0" == 1;
+    //convert string using toNumber
+    0 == 1; //false!
+
+</code></pre>
+
+           </section>
+           <section>
+                <h3><span class="color">Falsy</span> values</h3>
+
+               <ul>
+               <li>0</li><li>null</li><li>undefined</li><li>false</li><li>""</li><li>NaN</li>
+               </ul>
+
+               <img class="fragment" style="position: absolute; height: 80%; bottom: 0; right: 0;  border: 0; box-shadow: none; background-color: transparent" src="img/bored.png">
+
+               </img>
+           </section>
+           <section>
+               <iframe width="640" height="360" src="http://www.youtube.com/embed/kXEgk1Hdze0?feature=player_detailpage&start=80" frameborder="0" allowfullscreen></iframe>
+           </section>
+       </section>
+
+      <section>
+          <h2>Hoisting</h2>
+<pre><code class="javascript">
+ var hoisting = 10;
+ function hoistingIsABitch() {
+   console.log(x);
+   var hoisting = 10;
+   console.log(x);
+ }
+</code></pre>
+<pre class="fragment"><code class="javascript">
+ var hoisting = 10;
+ function hoistingIsABitch() {
+   var hoisting;
+   console.log(x);
+   hoisting = 10;
+   console.log(x);
+ }
+</code></pre>
+
       </section>
+      <section>
+          <h2>Semicolons</h2>
+<pre><code class="javascript">
+function shoeFactory() {
+  return
+  {
+    shoeSize: 48
+  };
+}
+</code></pre>
+
+
+          <div  style="float: left; width: 49%">
+<pre><code class="javascript">
+ a = b + c
+ [1].push(a)
+
+</code></pre>
+          </div>
+          <div  style="float: right; width: 49%">
+<pre class="fragment"><code class="javascript">
+ a = b + c[1].push(a)
+
+
+</code></pre>
+          </div>
+          <div style="clear: both"/>
+      </section>
+   <section>
+   <section>
+       <h2>OO</h2>
+
+<pre><code class="javascript">
+ var quanti = {
+   name: "Quanti s.r.o.",
+   employees: 25,
+   greet: function() {
+     console.log("Welcome to Quanti!");
+   }
+ };
+</code></pre>
+
+
+   </section>
+   <section>
+       <h2>Constructor</h2>
+
+<pre><code class="javascript">
+ function Company(name, employees) {
+   this.name = name || "No name";
+
+   var employees =  employees || 0;
+
+   this.greet = function() {
+     console.log("Welcome to Quanti!");
+   };
+
+   this.getNumberOfEmployees = function() {
+     return this.employees;
+   };
+ }
+
+ var quanti = new Company("Quanti.s.r.o.", 25);
+</code></pre>
+
+
+   </section>
+   <section>
+       <h2>Prototype</h2>
+
+<pre><code class="javascript">
+ function Company(name, employees) {
+   this.name = name || "No name";
+
+   var employees =  employees || 0;
+
+
+ }
+
+ Company.prototype = {
+   greet: function() {
+     console.log("Welcome to Quanti!");
+   },
+   getNumberOfEmployees: function() {
+     return this.employees;
+   }
+ }
+
+ var quanti = new Company("Quanti.s.r.o.", 25);
+</code></pre>
+
+
+   </section>
+   <section>
+       <h2>beware of <span class="color">this</span>!</h2>
+
+<pre><code class="javascript">
+ function Company(name) {
+   this.name = name || "No name";
+
+   this.bindInput = function(input) {
+     jQuery(input).on("keydown", function() {
+       this.name = jQuery(input).val();
+     });
+   };
+ }
+</code></pre>
+
+<pre class="fragment"><code class="javascript">
+ function Company(name) {
+   this.name = name || "No name";
+   var instance = this;
+
+   this.bindInput = function(input) {
+     jQuery(input).on("keydown", function() {
+       instance.name = jQuery(input).val();
+     });
+   };
+ }
+</code></pre>
+
+
+   </section>
+   </section>
+
+   <section>
+       <h2>Use the <span class="color">Force</span> Luke!</h2>
+
+       <h3 class="fragment">Chrome dev tools!</h3>
+   </section>
+   <section>
+       <a href="https://github.com/macrosak/tadoDevMeetings"
+          style="width: 149px; height: 149px; background: url('https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png') no-repeat; display: block"></a>
+       <h2>Resources</h2>
+    <ul>
+        <li><a href="https://github.com/hakimel/reveal.js/" rel="noreferrer">reveal.js</a></li>
+        <li><a href="http://elegantcode.com/2011/03/24/basic-javascript-part-12-function-hoisting/" rel="noreferrer">Basic JavaScript</a></li>
+        <li><a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html" rel="noreferrer">Module Pattern</a></li>
+    </ul>
+   </section>
+
    </div>
 
 
@@ -146,6 +511,10 @@
    });
 
 </script>
+
+
+<script src="src/overloading.js"></script>
+<script src="src/hoisting.js"></script>
 
 </body>
 </html>
