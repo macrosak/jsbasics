@@ -429,6 +429,52 @@ function shoeFactory() {
    </section>
 
    <section>
+   <section>
+       <h2>Global namespace</h2>
+
+<pre><code class="javascript">
+ var superCoolStuff = 1;
+ setTimeout(...);
+</code></pre>
+<pre class="fragment"><code class="javascript">
+ window.superCoolStuff = 1;
+ window.setTimeout(...);
+</code></pre>
+   </section>
+   <section>
+       <h2>Packages</h2>
+
+<pre><code class="javascript">
+ var cz.quanti.supecoolpackage = cz.quanti.supecoolpackage || {};
+
+ cz.quanti.supecoolpackage.Company = function(name) {
+   // ...
+ };
+
+ var quanti = new cz.quanti.supecoolpackage.Company("Quanti s.r.o.");
+</code></pre>
+   </section>
+   <section>
+       <h2>Module pattern</h2>
+
+<pre><code class="javascript">
+ var cz.quanti.supecoolpackage = (function(dependency) {
+    var package = {};
+
+    package.Company = function(name) {
+      // ...
+    };
+
+    package.Employee = function(company, name) {
+      // ...
+    };
+    
+    return package;
+ }) ()
+</code></pre>
+   </section>
+   </section>
+   <section>
        <h2>Use the <span class="color">Force</span> Luke!</h2>
 
        <h3 class="fragment">Chrome dev tools!</h3>
