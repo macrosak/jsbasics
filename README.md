@@ -1,4 +1,4 @@
 jsbasics
 ========
 
-JS Basics
+http://macrosak.github.io/jsbasics/
